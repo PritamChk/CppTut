@@ -29,5 +29,10 @@ int main(){
 
     cout<<"Double VAl: "<<lombaFraction<<" and sizeof Double = "<<sizeof(int)<<" Byte(s)"<<endl; 
     //end of print statements
+    //Declaration can be done in any place in C++
+    //Now comes example of modifiers
+    short var_1 = 256;
+    cout<<endl<<"var 1 =  "<<var_1<<sizeof var_1<<endl; 
+    
     return 0;
 }
