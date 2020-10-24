@@ -8,7 +8,7 @@ CPP supports following preprocessors
 */
 #include<iostream>
 
-//#define DEBUG //to DEBUG FLAG use [g++ -D DEBUG preprocessors.cpp] from cmd
+//#define DEBUG //to on DEBUG FLAG use [g++ -D DEBUG preprocessors.cpp] from cmd
 //else to on DEBUG uncomment previous line
 
 #ifndef print
@@ -26,7 +26,7 @@ CPP supports following preprocessors
 
 int main(void){
     print<<"Hello ifndef"<<newline;
-    #ifdef DEBUG 
+    #ifdef DEBUG // this won't work if DEBUG isn't defined
         print<<"as DEBUG FLAG is on, so ifdef is working"<<newline;
     #endif    
     return 0;
