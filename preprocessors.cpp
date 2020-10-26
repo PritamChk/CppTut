@@ -12,7 +12,7 @@ CPP supports following preprocessors
 //else to on DEBUG uncomment previous line
 
 #ifndef print
-#define print std::cout
+    #define print std::cout
 #endif
 
 #ifndef scan
