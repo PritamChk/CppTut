@@ -1,5 +1,6 @@
 #include<iostream>
 #include <array>
+#include<vector>
 using namespace std;
 
 
@@ -18,7 +19,7 @@ double add(std::vector<double> const & values){}
  *
  * @overload
  */
-double add(double[] const values, size_t nValues){}
+double add(double values, size_t nValues){}
 
 /**
  * Ai function ta add kore 2 to number ke, er cheye besi kichu bolar nei
