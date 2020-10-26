@@ -22,9 +22,17 @@
 
 using namespace std;
 
+/**
+ * Person is class
+ * it stores age of a person
+ * age: integer
+ * & it stores Name of the person
+ * Name: String
+**/
 class Person{
     public:
-    int age;
+    ///stores age of the person
+    int age; 
     string name;
     bool operator < (const Person& rhs) const {return name< rhs.name;}
 };
@@ -49,6 +57,7 @@ int main(){
     */
     //Example: 2-A 
     // /*
+    
     set<Person,std::less<>> personSet = {{21,"Siman"}, {22,"Pritam"}, {22,"Adrija"}, {20,"Sohham"}};
     for(const auto& e: personSet){
         cout<<"Age: " << e.age<<" Name: " << e.name << endl;
