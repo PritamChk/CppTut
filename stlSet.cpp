@@ -22,12 +22,45 @@
 
 using namespace std;
 
+class Person{
+    public:
+    int age;
+    string name;
+    bool operator < (const Person& rhs) const {return name< rhs.name;}
+};
+
 int main(){
+    system("clear");
+    /* Example 1
     set<int> mySet = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5};
 
     for(const auto& e: mySet){
         cout<< e << endl;
     }
-    
+     //nested comment->
+     //output->
+     //________________________
+     // 1
+     // 2
+     // 3
+     // 4
+     // 5
+     //_________________________
+    */
+    //Example: 2-A 
+    // /*
+    set<Person,std::less<>> personSet = {{21,"Siman"}, {22,"Pritam"}, {22,"Adrija"}, {20,"Sohham"}};
+    for(const auto& e: personSet){
+        cout<<"Age: " << e.age<<" Name: " << e.name << endl;
+    }
+    //output
+    //_____________________________
+    //error: no match for ‘operator<’ (operand types are ‘const Person’ and ‘const Person’)
+    // 386 |       { return __x < __y; }
+    //  |                ~~~~^~~~~
+    //
+    //_____________________________
+    // */
+
     return 0;
 }
